@@ -1,7 +1,7 @@
 #include <iostream>
 #include "loading.h"
 #include <string>
-#include <Windows.h>
+#include <unistd.h>   
 #include "adminFunction.h"
 
 using namespace std;
@@ -13,7 +13,7 @@ void mainMenu(void);
 
 void passwordVerification()
 {
-    system("cls");
+    system("clear");
 
     string password;
 
@@ -26,7 +26,7 @@ void passwordVerification()
 
         if (password != "password")
         {
-            system("cls");
+            system("clear");
             cout << "\n\n\n\n\n\t\t"
                  << "wrong password!, try again or type 'quit' / 'exit' to Quit The program.";
             cout << "\n\n\n\t\t\t\t\tEnter Password : ";
@@ -34,13 +34,13 @@ void passwordVerification()
 
         if (password == "Quit" || password == "quit" || password == "exit" || password == "Exit" || password == "QUIT" || password == "EXIT")
         {
-            system("cls");
+            system("clear");
             cout << "\t\t\n\n\n\n\n\n\n\t\t\t\t\tQuitting The Program";
 
             for (int i = 0; i < 4; i++)
             {
 
-                Sleep(1000); // 1 second pause;
+                sleep(1); // 1 second pause;
                 cout << ".";
             }
 
@@ -56,13 +56,7 @@ void passwordVerification()
 int main()
 {
 
-    // fast io
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    //loadingBar(); // loadingBar() is in the loading.h header for loading animation.
-    system("color 9F");
+    loadingBar(); // loadingBar() is in the loading.h header for loading animation.
 
     passwordVerification();
     return 0;

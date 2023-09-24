@@ -1,8 +1,8 @@
 #include <fstream>
 #include <string.h>
 #include <bits/stdc++.h>
+#include <unistd.h>   
 #include <string>
-#include <Windows.h>
 #include <stdlib.h>
 
 using namespace std;
@@ -17,7 +17,7 @@ void studentFunction(void);
 
 void adminFunction()
 {
-    system("cls");
+    system("clear");
     cout << "\n\n\t\t\t\t\t | Logged In as Admin |\n";
     cout << "\n\n\t\t\t\t\t 1. Add Students Detail";
     cout << "\n\n\t\t\t\t\t 2. Delete Students";
@@ -57,27 +57,27 @@ void adminFunction()
                 break;
 
             case 6:
-                system("cls");
+                system("clear");
                 cout << "\t\t\n\n\n\n\n\n\n\t\t\t\t\tQuitting The Program";
 
                 for (int i = 0; i < 4; i++)
                 {
 
-                    Sleep(1000);
+                    sleep(1);
                     cout << ".";
                 }
                 exit(0);
                 break;
 
             default:
-                system("cls");
+                system("clear");
                 cout << "\n\n\t\t\t\t\t Logged In as Admin";
                 cout << "\n\n\t\t\t\t\t 1. Add Students Record";
                 cout << "\n\n\t\t\t\t\t 2. Delete Record";
                 //  cout << "\n\n\t\t\t\t\t 3. update Record";
                 cout << "\n\n\t\t\t\t\t 4. View Table ";
                 cout << "\n\n\t\t\t\t\t 5. Main Menu ";
-                cout << "\n\n\t\t\t\t\t 6. Exit";
+                cout << "\n\n\t\t\t\t\t 6. Exit (Leave Program)";
 
                 cout << "\n\n\t\t\t\t\t invalid input!";
 
@@ -90,7 +90,7 @@ void adminFunction()
 
 void mainMenu()
 {
-    system("cls");
+    system("clear");
 
     cout << "\n\n\n\n\t\t\t\t\t Login As : ";
     cout << "\n\n\n\t\t\t\t\t 1. Admin ";
@@ -107,20 +107,20 @@ void mainMenu()
         break;
 
     case 2:
-        system("cls");
+        system("clear");
 
         cout << "Welcom as Student";
         studentFunction();
         break;
 
     case 3:
-        system("cls");
+        system("clear");
         cout << "\t\t\n\n\n\n\n\n\n\t\t\t\t\tQuitting The Program";
 
         for (int i = 0; i < 4; i++)
         {
 
-            Sleep(1000);
+            sleep(1);
             cout << ".";
         }
 
@@ -138,7 +138,7 @@ void mainMenu()
 
 void deleteData()
 {
-    system("cls");
+    system("clear");
 
     // Open FIle pointers
     fstream fin, fout;
@@ -217,7 +217,7 @@ void deleteData()
     // renaming the new file with the existing file name
     rename("datanew.csv", "data.csv");
 
-    Sleep(2000);
+    sleep(2);
 
     adminFunction();
 }
@@ -225,7 +225,7 @@ void deleteData()
 /*
 void updateData()
 {
-    system("cls");
+    system("clear");
     cout << "in update function\n";
         // File pointer
         fstream fin, fout;
@@ -366,7 +366,7 @@ void updateData()
 */
 void addData()
 {
-    system("cls");
+    system("clear");
     fstream file("data.csv", ios::out | ios::app);
     if (!file)
     {
@@ -433,7 +433,7 @@ void addData()
 
 void viewData()
 {
-    system("cls");
+    system("clear");
 
     fstream file("data.csv");
 
@@ -479,7 +479,7 @@ void viewData()
 
 void adminVerification()
 {
-    system("cls");
+    system("clear");
 
     string password;
 
@@ -492,7 +492,7 @@ void adminVerification()
 
         if (password != "password")
         {
-            system("cls");
+            system("clear");
             cout << "\n\n\n\n\n\t\t"
                  << "wrong password!, try again or type 'menu' to Navigate to Main Menu";
             cout << "\n\n\n\t\t\t\t\tEnter Password : ";
@@ -512,7 +512,7 @@ void adminVerification()
 void studentFunction()
 {
 
-    system("cls");
+    system("clear");
 
     fstream file("data.csv");
 
