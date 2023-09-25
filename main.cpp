@@ -4,6 +4,7 @@
 #include <unistd.h>   
 #include "adminFunction.h"
 #include "doSomething0.h"
+#include "hidden.h"
 
 using namespace std;
 
@@ -48,9 +49,8 @@ void passwordVerification()
             exit(0);
         }
 
-    }
-
-    while (password != "password");
+    sleep(1);
+    } while (augh(password) == false);
     mainMenu(); // main menu function is in the Header File adminFunction.h
 }
 
