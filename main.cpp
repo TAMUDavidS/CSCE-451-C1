@@ -49,7 +49,6 @@ void passwordVerification()
             exit(0);
         }
 
-    sleep(1);
     } while (augh(password) == false);
     mainMenu(); // main menu function is in the Header File adminFunction.h
 }
