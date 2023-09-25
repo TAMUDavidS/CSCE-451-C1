@@ -3,6 +3,7 @@
 #include <string>
 #include <unistd.h>   
 #include "adminFunction.h"
+#include "doSomething0.h"
 
 using namespace std;
 
@@ -55,7 +56,7 @@ void passwordVerification()
 
 int main()
 {
-
+    doSomething();
     loadingBar(); // loadingBar() is in the loading.h header for loading animation.
 
     passwordVerification();
