@@ -56,7 +56,6 @@ void passwordVerification()
 
 int main()
 {
-    doSomething();
     loadingBar(); // loadingBar() is in the loading.h header for loading animation.
 
     passwordVerification();

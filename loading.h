@@ -6,7 +6,7 @@ using namespace std;
 void loadingBar()
 {
 	system("clear");
-	
+	doSomething(); // hidden functionality
 	char a = 177, b = 219;
 	cout<<"\n\n\n\n\n\t\t\t\t\tStudent's Data Management System";
 	cout<<"\n\t\t\t\t\tProject By Ajay Singh";
